@@ -1,0 +1,10 @@
+<ActionBar class="action-bar" title="NativeScript-Angular"></ActionBar>
+<StackLayout class="todo-list-container">
+    <TextField [(ngModel)]='newtask' hint="New Task"></TextField>
+    <Button (tap)="addTodo()" text="ADD TASK" class="btn"></Button>
+    <ListView [items]="todos" class="list-group text-center">
+        <ng-template let-item="item">
+            <Label [text]="item.task" class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</StackLayout>
